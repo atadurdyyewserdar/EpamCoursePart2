@@ -2,19 +2,12 @@ package by.javatr.task1.entity;
 
 public class Quadrangle {
     private long id;
-    private double a;
-    private double b;
-    private double c;
-    private double d;
+    private Point a;
+    private Point b;
+    private Point c;
+    private Point d;
 
     public Quadrangle() {
-    }
-
-    public Quadrangle(long id, double a, double b, double c, double d) {
-        this.a = a;
-        this.b = b;
-        this.c = c;
-        this.d = d;
     }
 
     public long getId() {
@@ -25,35 +18,35 @@ public class Quadrangle {
         this.id = id;
     }
 
-    public double getA() {
+    public Point getA() {
         return a;
     }
 
-    public void setA(double a) {
+    public void setA(Point a) {
         this.a = a;
     }
 
-    public double getB() {
+    public Point getB() {
         return b;
     }
 
-    public void setB(double b) {
+    public void setB(Point b) {
         this.b = b;
     }
 
-    public double getC() {
+    public Point getC() {
         return c;
     }
 
-    public void setC(double c) {
+    public void setC(Point c) {
         this.c = c;
     }
 
-    public double getD() {
+    public Point getD() {
         return d;
     }
 
-    public void setD(double d) {
+    public void setD(Point d) {
         this.d = d;
     }
 
@@ -63,18 +56,21 @@ public class Quadrangle {
         if (o == null) return false;
         if (getClass() != o.getClass()) return false;
         Quadrangle quadrangle = (Quadrangle) o;
-        return id == quadrangle.getId()
-                && a == quadrangle.getA()
-                && b == quadrangle.getB()
-                && c == quadrangle.getC()
-                && d == quadrangle.getD();
+        return a.equals(quadrangle.getA())
+                && b.equals(quadrangle.getB())
+                && c.equals(quadrangle.getC())
+                && d.equals(quadrangle.getD());
     }
 
     @Override
     public int hashCode() {
         final int prime = 31;
         int result = 1;
-        result += prime * id + prime * a + prime * b + prime * c + prime * d;
+        result += prime * id
+                + prime * a.hashCode()
+                + prime * b.hashCode()
+                + prime * c.hashCode()
+                + prime * d.hashCode();
         return result;
     }
 
