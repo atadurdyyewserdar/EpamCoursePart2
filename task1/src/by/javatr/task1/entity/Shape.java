@@ -1,27 +1,23 @@
-package by.javatr.entity;
+package by.javatr.task1.entity;
 
 public abstract class Shape {
-    private String name;
+    private long id;
 
-    public Shape() {
-        name = "unknown";
+    public Shape(long id) {
+        this.id = id;
     }
 
-    public Shape(String name) {
-        this.name = name;
+    public long getId() {
+        return id;
     }
 
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
+    public void setId(long id) {
+        this.id = id;
     }
 
     @Override
     public String toString() {
-        return "Shape{ " + name + " }";
+        return "Shape{ id = " + id + " }";
     }
 
     @Override
@@ -30,12 +26,12 @@ public abstract class Shape {
         if (o == null) return true;
         if (getClass() != o.getClass()) return false;
         Shape shape = (Shape) o;
-        return name.equals(shape.getName());
+        return id == shape.getId();
     }
 
     @Override
     public int hashCode() {
-        return name == null ? 0 : 31 * name.hashCode();
+        return (int) (31 * id);
     }
 
     public abstract double area();
