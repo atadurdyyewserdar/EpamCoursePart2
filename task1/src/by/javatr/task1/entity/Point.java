@@ -1,10 +1,10 @@
-package by.javatr.entity;
+package by.javatr.task1.entity;
 
 public class Point {
     private double x;
     private double y;
 
-    public Point(){
+    public Point() {
     }
 
     public Point(double x, double y) {
@@ -28,7 +28,6 @@ public class Point {
         this.y = y;
     }
 
-
     @Override
     public String toString() {
         return "Point{" +
@@ -38,16 +37,16 @@ public class Point {
     }
 
     @Override
-    public boolean equals(Object o){
+    public boolean equals(Object o) {
         if (o == null) return false;
         if (this == o) return true;
         if (getClass() != o.getClass()) return false;
-        Point point = (Point)o;
+        Point point = (Point) o;
         return x == point.getX() && y == point.getY();
     }
 
     @Override
-    public int hashCode(){
-        return  (int)((x * 31) + (y * 31));
+    public int hashCode() {
+        return (int) ((x * 31) + (y * 31));
     }
 }
