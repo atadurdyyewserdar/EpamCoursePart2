@@ -1,7 +1,7 @@
 package by.javatr.task1.entity;
 
 public abstract class Shape {
-    private long id;
+    protected long id;
 
     public Shape(long id) {
         this.id = id;
