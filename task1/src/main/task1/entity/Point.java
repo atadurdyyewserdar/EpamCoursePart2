@@ -1,4 +1,4 @@
-package by.javatr.task1.entity;
+package main.task1.entity;
 
 public class Point {
     private double x;

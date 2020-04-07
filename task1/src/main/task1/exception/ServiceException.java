@@ -1,4 +1,4 @@
-package by.javatr.task1.exception;
+package main.task1.exception;
 
 public class ServiceException extends Exception {
     public ServiceException() {
