@@ -1,0 +1,9 @@
+2020-59-20 07:59:38.398 [INFO] main: Calculated area for quadrangle Id: 1	area: 3.9999999999999982
+2020-59-20 07:59:38.430 [INFO] main: Calculated Quadrangle Id: 10	perimeter: 8.0
+2020-17-20 08:17:50.217 [ERROR] main: Empty file
+2020-18-20 08:18:58.554 [INFO] main: Read from file7 lines
+2020-24-20 08:24:40.356 [ERROR] main: Wrong Quadrangle data
+2020-26-20 08:26:34.508 [ERROR] main: Wrong Quadrangle data
+2020-27-20 08:27:43.657 [INFO] main: Read from file7 lines
+2020-27-20 08:27:43.676 [INFO] main: Calculated area for quadrangle Id: 1	area: 3.9999999999999982
+2020-27-20 08:27:43.690 [INFO] main: Calculated Quadrangle Id: 10	perimeter: 8.0

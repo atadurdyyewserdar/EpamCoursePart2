@@ -32,6 +32,20 @@ public class QuadrangleCalculatorTest {
     }
 
     @Test
+    public void perimeterTest() {
+        double expected = 8;
+        double actual = quadrangleCalculator.perimeter(quadrangle);
+        Assert.assertEquals(expected, actual, 0.000_001);
+    }
+
+    @Test
+    public void areaTest() {
+        double expected = 4;
+        double actual = quadrangleCalculator.area(quadrangle);
+        Assert.assertEquals(expected, actual, 0.000_001);
+    }
+
+    @Test
     public void isSquareTest() {
         long id = idGenerator.generateId();
         Quadrangle quadrangle = new Quadrangle(id, new Point(1, 1),

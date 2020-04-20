@@ -18,10 +18,10 @@ public class QuadrangleValidator {
     }
 
     public boolean isCorrectQuadrangle(Point A, Point B, Point C, Point D) {
-        return isOnLine(B, C, D)
-                || isOnLine(A, C, D)
-                || isOnLine(A, B, D)
-                || isOnLine(A, B, C);
+        return !isOnLine(B, C, D)
+                || !isOnLine(A, C, D)
+                || !isOnLine(A, B, D)
+                || !isOnLine(A, B, C);
     }
 
     private boolean isOnLine(Point a, Point b, Point c) {
