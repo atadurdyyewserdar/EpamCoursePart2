@@ -4,46 +4,55 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Composite implements Component {
-    private List<Component> children;
-    private Type type;
+    private List<Component> child;
+    private Lexeme type;
 
-    public Composite(Type type) {
-        children = new ArrayList<Component>();
+    public Composite(Lexeme type) {
+        child = new ArrayList<>();
         this.type = type;
     }
 
     @Override
     public void add(Component component) {
-        children.add(component);
+        child.add(component);
     }
 
     @Override
     public void remove(Component component) {
-        children.remove(component);
+        child.remove(component);
     }
 
     @Override
-    public String getValue() {
-        StringBuilder stringBuilder = new StringBuilder();
-        for (Component component : children) {
-            if (type == Type.SENTENCE) {
-                stringBuilder.append(component.getValue()).append(" ");
-            } else if (type == Type.PARAGRAPH) {
-                stringBuilder.append(component.getValue()).append("\n");
-            }
-
-        }
-        return stringBuilder.toString();
-    }
-
-    @Override
-    public Type getType() {
+    public Lexeme getLexemeType() {
         return type;
     }
 
     @Override
-    public List<Component> getChildren() {
-        return children;
+    public PunctuationMark getPunctuation() {
+        return PunctuationMark.UNKNOWN;
+    }
+
+    @Override
+    public List<Component> getChild() {
+        return child;
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder stringBuilder = new StringBuilder();
+        for (Component component : child) {
+            switch (type) {
+                case PARAGRAPH:
+                    stringBuilder.append(component.toString()).append("\n");
+                    break;
+                case WORD:
+                case SENTENCE:
+                default:
+                    stringBuilder.append(component.toString());
+                    break;
+            }
+        }
+        return stringBuilder.toString();
     }
 
     @Override
@@ -51,7 +60,7 @@ public class Composite implements Component {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Composite composite = (Composite) o;
-        return children.equals(composite.children) &&
+        return child.equals(composite.child) &&
                 type == composite.type;
     }
 
@@ -59,19 +68,10 @@ public class Composite implements Component {
     public int hashCode() {
         final int prime = 31;
         int result = 1;
-        for (Component component : children) {
+        for (Component component : child) {
             result += component.hashCode() * prime;
         }
         result += type.hashCode() * prime;
         return result;
-    }
-
-    @Override
-    public String toString() {
-        return new StringBuilder("Composite{children=")
-                .append(children)
-                .append(", type=")
-                .append(type)
-                .append('}').toString();
     }
 }

@@ -7,9 +7,9 @@ public interface Component {
 
     void remove(Component component);
 
-    String getValue();
+    Lexeme getLexemeType();
 
-    Type getType();
+    PunctuationMark getPunctuation();
 
-    List<Component> getChildren();
+    List<Component> getChild();
 }

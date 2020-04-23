@@ -1,37 +1,45 @@
 package by.java.atadu.task2.composite;
 
+import java.util.Collections;
 import java.util.List;
 
 public class Leaf implements Component {
-    private String value;
-    private Type type;
+    private Character value;
+    private PunctuationMark type;
 
-    public Leaf(String value, Type type) {
+    public Leaf(Character value, PunctuationMark type) {
         this.value = value;
         this.type = type;
     }
 
     @Override
     public void add(Component component) {
+        //Not supported
     }
 
     @Override
     public void remove(Component component) {
+        //Not supported
     }
 
     @Override
-    public String getValue() {
-        return value;
+    public Lexeme getLexemeType() {
+        return null;
     }
 
     @Override
-    public Type getType() {
+    public PunctuationMark getPunctuation() {
         return type;
     }
 
     @Override
-    public List<Component> getChildren() {
-        return null;
+    public List<Component> getChild() {
+        return Collections.emptyList();
+    }
+
+    @Override
+    public String toString() {
+        return value.toString();
     }
 
     @Override
@@ -49,14 +57,5 @@ public class Leaf implements Component {
         int result = 1;
         result += prime * value.hashCode() + type.hashCode();
         return result;
-    }
-
-    @Override
-    public String toString() {
-        return new StringBuilder("Leaf{value=")
-                .append(value)
-                .append(", type=")
-                .append(type)
-                .append('}').toString();
     }
 }
