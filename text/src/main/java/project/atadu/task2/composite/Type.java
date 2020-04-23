@@ -1,4 +1,5 @@
 package project.atadu.task2.composite;
 
-public enum Expression {
+public enum Type {
+    WORD, EXPRESSION, SENTENCE
 }

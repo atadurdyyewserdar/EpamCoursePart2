@@ -11,8 +11,6 @@ b
 2src/by/java/atadu/task2/parser/SentenceParser.java,4\5\451aced398499fc847c60904f6cf88d0b91bfa45
 c
 3src/by/java/atadu/task2/parser/ParagraphParser.java,2\f\2f7b9376e9c24c835ae4d1370f71e23b291b0871
-]
--src/by/java/atadu/task2/composite/Lexeme.java,0\f\0f7240d09299fb8bf87dbeddb51883a9a54337ea
 ^
 .src/by/java/atadu/task2/parser/WordParser.java,8\3\83380aa095484736aaa6be0a3efed11dcb2cfd04
 h
@@ -21,9 +19,11 @@ h
 .src/by/java/atadu/task2/reader/TextReader.java,7\2\72917c7fcfa886961dcb07c54d912e0f78ee101c
 g
 7src/by/java/atadu/task2/reader/impl/TextReaderImpl.java,8\d\8d5eddbad7704690049feb4f2f0f6676e423ba37
-f
-6src/by/java/atadu/task2/composite/PunctuationMark.java,4\1\41b7536d6958b0e80e88817c0d93867ad958ae9d
 \
 ,src/by/java/atadu/task2/logic/TextLogic.java,5\1\51d59fda3922d750973470afd28b94fdb42e9109
 ^
 .src/by/java/atadu/task2/parser/TextParser.java,f\8\f81569536eaf0df6558dddf9f5a9672ec6825a2e
+d
+4src/by/java/atadu/task2/composite/CharacterType.java,d\5\d54047e51f441a72f569cdc4904a7e1cd9f21f49
+[
++src/by/java/atadu/task2/composite/Type.java,1\7\17a3b63b64e5b12e94fa84484846a463b2814d42

@@ -10,9 +10,9 @@ import java.util.regex.Pattern;
 public class TextParser implements Parser {
     private static final String REGEX_PARAGRAPH = "([\t]|[ ]{4})[ a-zA-Z1-9,.?!;:()*/+-]+([.?!]|[.]{3})[\n]?";
     private ParagraphParser paragraphParser = new ParagraphParser();
-    private Pattern pattern = Pattern.compile(REGEX_PARAGRAPH);
 
     public Component parse(String str) {
+        Pattern pattern = Pattern.compile(REGEX_PARAGRAPH);
         Matcher matcher = pattern.matcher(str);
         Component paragraphs = new Composite(Type.TEXT);
         while (matcher.find()) {

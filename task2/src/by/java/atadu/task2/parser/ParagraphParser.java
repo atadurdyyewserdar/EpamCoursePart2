@@ -10,9 +10,10 @@ import java.util.regex.Pattern;
 public class ParagraphParser implements Parser {
     private static final String REGEX_SENTENCE = "^\\s+[A-Za-z,;'\"\\s]+[.?!]$";
     private SentenceParser sentenceParser = new SentenceParser();
-    private Pattern pattern = Pattern.compile(REGEX_SENTENCE);
+
 
     public Component parse(String str) {
+        Pattern pattern = Pattern.compile(REGEX_SENTENCE);
         Matcher matcher = pattern.matcher(str);
         Component sentences = new Composite(Type.PARAGRAPH);
         while (matcher.find()) {

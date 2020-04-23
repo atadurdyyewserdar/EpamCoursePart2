@@ -1,11 +1,8 @@
 package by.javatr.atadu.task1.validator;
 
 import by.javatr.atadu.task1.entity.Point;
-import by.javatr.atadu.task1.entity.Quadrangle;
 import by.javatr.atadu.task1.generator.IdGenerator;
-import by.javatr.atadu.task1.logic.QuadrangleCalculator;
 import org.testng.Assert;
-import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 public class QuadrangleValidatorTest {
