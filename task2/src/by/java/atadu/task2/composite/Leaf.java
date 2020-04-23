@@ -5,9 +5,9 @@ import java.util.List;
 
 public class Leaf implements Component {
     private Character value;
-    private PunctuationMark type;
+    private CharacterType type;
 
-    public Leaf(Character value, PunctuationMark type) {
+    public Leaf(Character value, CharacterType type) {
         this.value = value;
         this.type = type;
     }
@@ -23,12 +23,12 @@ public class Leaf implements Component {
     }
 
     @Override
-    public Lexeme getLexemeType() {
+    public Type getType() {
         return null;
     }
 
     @Override
-    public PunctuationMark getPunctuation() {
+    public CharacterType getPunctuation() {
         return type;
     }
 

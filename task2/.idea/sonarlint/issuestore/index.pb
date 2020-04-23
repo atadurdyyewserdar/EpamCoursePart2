@@ -3,8 +3,6 @@
 +src/by/java/atadu/task2/composite/Leaf.java,f\c\fc45959e7410b1713ccd707923ee8afb7db5138e
 `
 0src/by/java/atadu/task2/composite/Composite.java,7\d\7d9ee717011571363ba23c02d8f0ef60cd9fd898
-g
-7test/by/java/atadu/task2/parser/SentenceParserTest.java,c\1\c1a69c6f3d41f19955ef45fe13f352c685f6dc12
 Z
 *src/by/java/atadu/task2/parser/Parser.java,1\0\10c8745981bf286acaf5b95988c1b9eeeffe45b0
 `
@@ -15,8 +13,6 @@ c
 3src/by/java/atadu/task2/parser/ParagraphParser.java,2\f\2f7b9376e9c24c835ae4d1370f71e23b291b0871
 ]
 -src/by/java/atadu/task2/composite/Lexeme.java,0\f\0f7240d09299fb8bf87dbeddb51883a9a54337ea
-]
--src/by/java/atadu/task2/composite/Symbol.java,a\e\ae91bc44087b1937b9a4ceff309c3e33256c8db1
 ^
 .src/by/java/atadu/task2/parser/WordParser.java,8\3\83380aa095484736aaa6be0a3efed11dcb2cfd04
 h

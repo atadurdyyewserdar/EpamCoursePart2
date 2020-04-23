@@ -5,9 +5,9 @@ import java.util.List;
 
 public class Composite implements Component {
     private List<Component> child;
-    private Lexeme type;
+    private Type type;
 
-    public Composite(Lexeme type) {
+    public Composite(Type type) {
         child = new ArrayList<>();
         this.type = type;
     }
@@ -23,13 +23,13 @@ public class Composite implements Component {
     }
 
     @Override
-    public Lexeme getLexemeType() {
+    public Type getType() {
         return type;
     }
 
     @Override
-    public PunctuationMark getPunctuation() {
-        return PunctuationMark.UNKNOWN;
+    public CharacterType getPunctuation() {
+        return CharacterType.UNKNOWN;
     }
 
     @Override

@@ -1,6 +1,6 @@
 package by.java.atadu.task2.composite;
 
-public enum PunctuationMark {
+public enum CharacterType {
     PERIOD,
     COMMA,
     COLON,
