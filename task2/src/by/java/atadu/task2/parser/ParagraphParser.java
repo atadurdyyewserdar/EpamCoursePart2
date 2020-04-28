@@ -8,18 +8,17 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class ParagraphParser implements Parser {
-    private static final String REGEX_SENTENCE = "^\\s+[A-Za-z,;'\"\\s]+[.?!]$";
+    private static final String REGEX_PARAGRAPH = "([\t]|[ ]{4})[ a-zA-Z1-9,.?!;:()*/+-]+([.?!]|[.]{3})[\n]?";
     private SentenceParser sentenceParser = new SentenceParser();
 
-
     public Component parse(String str) {
-        Pattern pattern = Pattern.compile(REGEX_SENTENCE);
+        Pattern pattern = Pattern.compile(REGEX_PARAGRAPH);
         Matcher matcher = pattern.matcher(str);
-        Component sentences = new Composite(Type.PARAGRAPH);
+        Component paragraphs = new Composite(Type.PARAGRAPH);
         while (matcher.find()) {
-            Component sentence = sentenceParser.parse(matcher.group());
-            sentences.add(sentence);
+            Component current = sentenceParser.parse(matcher.group());
+            paragraphs.add(current);
         }
-        return sentences;
+        return paragraphs;
     }
 }

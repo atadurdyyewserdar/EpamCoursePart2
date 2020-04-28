@@ -1,59 +1,21 @@
 package by.java.atadu.task2.parser;
 
-import by.java.atadu.task2.composite.*;
+import by.java.atadu.task2.composite.Component;
+import by.java.atadu.task2.composite.Composite;
+import by.java.atadu.task2.composite.Type;
 
 public class WordParser implements Parser {
+    private static final String REGEX_WORD = "\\s+";
+    private SymbolParser symbolParser = new SymbolParser();
+
     @Override
     public Component parse(String str) {
-        Component characterComponent = new Composite(Type.WORD);
-        if (str.endsWith("...")) {
-            for (int i = 0; i < str.length() - 3; i++) {
-                director(str.charAt(i), characterComponent);
-            }
-            characterComponent.add(new Leaf('\u2026', CharacterType.ELLIPSIS));
-        } else {
-            for (char c : str.toCharArray()) {
-                director(c, characterComponent);
-            }
+        Component words = new Composite(Type.WORD);
+        String[] data = str.split(REGEX_WORD);
+        for (String s : data) {
+            Component word = symbolParser.parse(s);
+            words.add(word);
         }
-        return characterComponent;
-    }
-
-    private void director(Character c, Component component) {
-        switch (c) {
-            case ':':
-                component.add(new Leaf(c, CharacterType.COLON));
-                break;
-            case '.':
-                component.add(new Leaf(c, CharacterType.PERIOD));
-                break;
-            case ',':
-                component.add(new Leaf(c, CharacterType.COMMA));
-                break;
-            case ';':
-                component.add(new Leaf(c, CharacterType.SEMICOLON));
-                break;
-            case '?':
-                component.add(new Leaf(c, CharacterType.QUESTION_MARK));
-                break;
-            case '"':
-                component.add(new Leaf(c, CharacterType.QUOTATION));
-                break;
-            case '\'':
-                component.add(new Leaf(c, CharacterType.APOSTROPHE));
-                break;
-            case '!':
-                component.add(new Leaf(c, CharacterType.EXCLAMATION));
-                break;
-            default:
-                if (c >= 'A' && c <= 'Z' || c >= 'a' && c <= 'z') {
-                    component.add(new Leaf(c, CharacterType.LETTER));
-                } else if (c >= '0' && c <= '9') {
-                    component.add(new Leaf(c, CharacterType.NUMBER));
-                } else {
-                    component.add(new Leaf(c, CharacterType.UNKNOWN));
-                }
-                break;
-        }
+        return words;
     }
 }

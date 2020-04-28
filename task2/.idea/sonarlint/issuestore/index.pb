@@ -27,3 +27,17 @@ d
 4src/by/java/atadu/task2/composite/CharacterType.java,d\5\d54047e51f441a72f569cdc4904a7e1cd9f21f49
 [
 +src/by/java/atadu/task2/composite/Type.java,1\7\17a3b63b64e5b12e94fa84484846a463b2814d42
+S
+#.idea/sonarlint/issuestore/index.pb,9\f\9fe84ebb15faf917b7def6236dba604453cc61e0
+`
+0src/by/java/atadu/task2/interpreter/Context.java,9\5\9559b686345ff22739b2d732d91650f72cf1574b
+_
+/src/by/java/atadu/task2/interpreter/Client.java,2\c\2c9bdae5c4e7ed4e70a9176e9692bd50de20e07a
+c
+3src/by/java/atadu/task2/interpreter/Expression.java,4\1\41eac8e10b48163f6e44295cd903982e4af6eef2
+d
+4test/by/java/atadu/task2/interpreter/ClientTest.java,6\0\60a0c3ea9c61fb1adace9ba888945685fcef342d
+g
+7test/by/java/atadu/task2/parser/SentenceParserTest.java,c\1\c1a69c6f3d41f19955ef45fe13f352c685f6dc12
+`
+0src/by/java/atadu/task2/parser/SymbolParser.java,a\4\a4998c416cc439f79b9127b156c9f43e5f4fde82

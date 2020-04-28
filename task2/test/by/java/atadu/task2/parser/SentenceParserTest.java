@@ -4,7 +4,7 @@ import by.java.atadu.task2.composite.Component;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-public class ParagraphParserTest {
+public class SentenceParserTest {
     private String sentence;
     private Component expected;
 

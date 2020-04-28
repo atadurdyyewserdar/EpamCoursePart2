@@ -4,18 +4,22 @@ import by.java.atadu.task2.composite.Component;
 import by.java.atadu.task2.composite.Composite;
 import by.java.atadu.task2.composite.Type;
 
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 public class SentenceParser implements Parser {
-    private static final String REGEX_WORD = "\\s+";
+    private static final String REGEX_SENTENCE = "^\\s+[A-Za-z,;'\"\\s]+[.?!]$";
     private WordParser wordParser = new WordParser();
 
-    @Override
+
     public Component parse(String str) {
-        Component words = new Composite(Type.SENTENCE);
-        String[] data = str.split(REGEX_WORD);
-        for (String s : data) {
-            Component word = wordParser.parse(s);
-            words.add(word);
+        Pattern pattern = Pattern.compile(REGEX_SENTENCE);
+        Matcher matcher = pattern.matcher(str);
+        Component sentences = new Composite(Type.SENTENCE);
+        while (matcher.find()) {
+            Component sentence = wordParser.parse(matcher.group());
+            sentences.add(sentence);
         }
-        return words;
+        return sentences;
     }
 }
