@@ -9,7 +9,7 @@ import java.nio.file.Path;
 public class TextReaderImpl implements TextReader {
     public static final String DEFAULT_PATH = "src/resources/text.txt";
 
-    TextReaderImpl() {
+    public TextReaderImpl() {
     }
 
     @Override

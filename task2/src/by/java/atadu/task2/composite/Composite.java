@@ -7,6 +7,9 @@ public class Composite implements Component {
     private List<Component> child;
     private Type type;
 
+    public Composite() {
+    }
+
     public Composite(Type type) {
         child = new ArrayList<>();
         this.type = type;
@@ -46,7 +49,15 @@ public class Composite implements Component {
                     stringBuilder.append(component.toString()).append("\n");
                     break;
                 case WORD:
+                    if (!component.toString().endsWith(".")) {
+                        stringBuilder.append(component.toString()).append(" ");
+                    } else {
+                        stringBuilder.append(component.toString());
+                    }
+                    break;
                 case SENTENCE:
+                    stringBuilder.append(component.toString()).append(" ");
+                    break;
                 default:
                     stringBuilder.append(component.toString());
                     break;

@@ -8,7 +8,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class SentenceParser implements Parser {
-    private static final String REGEX_SENTENCE = "^\\s+[A-Za-z,;'\"\\s]+[.?!]$";
+    private static final String REGEX_SENTENCE = "[ a-zA-Z1-9,;:()*/+-]+([.]{3}|[.?!])";
     private WordParser wordParser = new WordParser();
 
 

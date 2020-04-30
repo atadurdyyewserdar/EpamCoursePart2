@@ -1,7 +1,7 @@
 
-a
-java:S2095"EUse try-with-resources or close this "Scanner" in a "finally" clause.(úÏ®}8ÜÙšñ›.
-g
-java:S1764"JCorrect one of the identical sub-expressions on both sides of operator "/"(Í’ÿµ8í‰èğ›.
 g
 java:S1764"JCorrect one of the identical sub-expressions on both sides of operator "-"(úÂ‚„8Àçğ›.
+g
+java:S1764"JCorrect one of the identical sub-expressions on both sides of operator "/"(Í’ÿµ8í‰èğ›.
+a
+java:S2095"EUse try-with-resources or close this "Scanner" in a "finally" clause.(úÏ®}8ÜÙšñ›.

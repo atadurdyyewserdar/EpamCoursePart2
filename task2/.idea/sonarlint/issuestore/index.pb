@@ -13,16 +13,12 @@ c
 3src/by/java/atadu/task2/parser/ParagraphParser.java,2\f\2f7b9376e9c24c835ae4d1370f71e23b291b0871
 ^
 .src/by/java/atadu/task2/parser/WordParser.java,8\3\83380aa095484736aaa6be0a3efed11dcb2cfd04
-h
-8test/by/java/atadu/task2/parser/ParagraphParserTest.java,9\7\97c1c4bd439e15d9ad355ee767230853d0c34730
 ^
 .src/by/java/atadu/task2/reader/TextReader.java,7\2\72917c7fcfa886961dcb07c54d912e0f78ee101c
 g
 7src/by/java/atadu/task2/reader/impl/TextReaderImpl.java,8\d\8d5eddbad7704690049feb4f2f0f6676e423ba37
 \
 ,src/by/java/atadu/task2/logic/TextLogic.java,5\1\51d59fda3922d750973470afd28b94fdb42e9109
-^
-.src/by/java/atadu/task2/parser/TextParser.java,f\8\f81569536eaf0df6558dddf9f5a9672ec6825a2e
 d
 4src/by/java/atadu/task2/composite/CharacterType.java,d\5\d54047e51f441a72f569cdc4904a7e1cd9f21f49
 [
@@ -41,3 +37,5 @@ g
 7test/by/java/atadu/task2/parser/SentenceParserTest.java,c\1\c1a69c6f3d41f19955ef45fe13f352c685f6dc12
 `
 0src/by/java/atadu/task2/parser/SymbolParser.java,a\4\a4998c416cc439f79b9127b156c9f43e5f4fde82
+a
+1test/by/java/atadu/task2/logic/TextLogicTest.java,2\e\2e2c19b42718a3c0ac276445618115767ffa9839
