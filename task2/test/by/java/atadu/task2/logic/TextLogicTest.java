@@ -1,15 +1,10 @@
 package by.java.atadu.task2.logic;
 
 import by.java.atadu.task2.composite.Component;
-import by.java.atadu.task2.composite.Composite;
 import by.java.atadu.task2.parser.ParagraphParser;
-import by.java.atadu.task2.reader.TextReader;
-import by.java.atadu.task2.reader.impl.TextReaderImpl;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
-
-import java.util.stream.Stream;
 
 public class TextLogicTest {
     private String text;
@@ -36,6 +31,7 @@ public class TextLogicTest {
     @Test
     public void sortParagraphBySentenceCount() {
         textLogic.sortParagraphBySentenceCount(component);
+
     }
 
     @Test
@@ -51,12 +47,6 @@ public class TextLogicTest {
 
     @Test
     public void findSimilarWordTest() {
-        int actual = 5;
-        String text = "\tOne two three. Four five six seven.\n\tEight nine ten one two.\n";
-        TextLogic textLogic2 = new TextLogic();
-        ParagraphParser paragraphParser2 = new ParagraphParser();
-        Component component2 = paragraphParser2.parse(text);
-        int count = textLogic.countSimilarWords(component2);
-        System.out.println(count);
+
     }
 }

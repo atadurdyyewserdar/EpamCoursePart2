@@ -1,12 +1,8 @@
 package by.java.atadu.task2.logic;
 
 import by.java.atadu.task2.composite.Component;
-import by.java.atadu.task2.composite.Composite;
 
 import java.util.*;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
-import java.util.stream.Collectors;
 
 public class TextLogic {
     private Component clone(Component component) {
@@ -22,6 +18,7 @@ public class TextLogic {
         boolean isZeroIndex = false;
         String currWord = "";
         String result = "";
+
         for (Component paragraph : component.getChild()) { // paragraphs
             for (Component sentence : paragraph.getChild()) { //sentences
                 for (Component word : sentence.getChild()) { //words
@@ -46,23 +43,7 @@ public class TextLogic {
     }
 
     public int countSimilarWords(Component component) {
-        List<String> list = new ArrayList<>();
-        int count = 0;
-        for (Component paragraph : component.getChild()) {
-            for (Component sentence : paragraph.getChild()) {
-                for (Component word : sentence.getChild()) {
-                    if (word.toString().length() == 0 || list.contains(word.toString())) {
-                        continue;
-                    }
-                    list.add(word.toString());
-                    Pattern pattern = Pattern.compile(".*" + word.toString() + ".*", Pattern.CASE_INSENSITIVE);
-                    Matcher matcher = pattern.matcher(component.toString());
-                    while (matcher.find()) {
-                        count++;
-                    }
-                }
-            }
-        }
-        return count;
+        //TODO
+        return 0;
     }
 }
