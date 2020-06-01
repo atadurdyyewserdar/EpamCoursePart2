@@ -1,0 +1,15 @@
+
+G
+java:S2629#"%Invoke method(s) only conditionally. (ÖÙä¸ûÿÿÿÿ8Ë…ıï¦.
+j
+java:S1192 "MDefine a constant instead of duplicating this literal "Transport # " 3 times.(ÎÛş8›·…ğ¦.
+Y
+java:S2629R"7Use the built-in formatting to construct this argument.(œÉµ§øÿÿÿÿ8š©ğ¦.
+c
+java:S3457R"AFormat specifiers should be used instead of string concatenation.(œÉµ§øÿÿÿÿ8š©ğ¦.
+^
+java:S3457S"AFormat specifiers should be used instead of string concatenation.(ö±8š©ğ¦.
+W
+java:S1118":Add a private constructor to hide the implicit public one.(™¼İ²8¤ú”î¦.
+T
+java:S2629S"7Use the built-in formatting to construct this argument.(ö±8š©ğ¦.
