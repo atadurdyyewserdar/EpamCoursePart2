@@ -1,6 +1,6 @@
 package com.epam.thread.runner;
 
-import com.epam.thread.entity.FerryLoader;
+import com.epam.thread.logic.FerryLoader;
 import com.epam.thread.entity.Transport;
 import com.epam.thread.entity.TransportType;
 

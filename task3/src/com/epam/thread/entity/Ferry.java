@@ -48,7 +48,7 @@ public class Ferry {
             stringBuilder.append("Transport # ")
                     .append(transport.hashCode())
                     .append(" added to queue");
-            logger.info("Transport");
+            logger.info(stringBuilder.toString());
             currentSize += transport.getSize();
             currentWeight += transport.getWeight();
             condition.signalAll();

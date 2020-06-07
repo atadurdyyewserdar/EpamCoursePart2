@@ -1,4 +1,6 @@
-package com.epam.thread.entity;
+package com.epam.thread.logic;
+
+import com.epam.thread.entity.Ferry;
 
 public class FerryLoader implements Runnable {
     @Override
