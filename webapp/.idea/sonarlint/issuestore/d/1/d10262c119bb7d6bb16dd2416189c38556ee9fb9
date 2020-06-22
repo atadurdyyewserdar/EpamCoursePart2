@@ -1,0 +1,11 @@
+
+U	java:S106%"9Replace this use of System.out or System.err by a logger.(Ø¼¢ƒ8‡¿±Î­.
+U	java:S106&"9Replace this use of System.out or System.err by a logger.(Ğ—Íè8ğó±Î­.
+T	java:S106"9Replace this use of System.out or System.err by a logger.(ä˜¢=8ó¬¯Î­.
+O
+java:S1135]"2Complete the task associated to this TODO comment.(…ïœ†8şòÏÍ­.
+d
+java:S20956"GUse try-with-resources or close this "ResultSet" in a "finally" clause.(„‡–8şòÏÍ­.
+£
+java:S1186a"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(í†‡µûÿÿÿÿ8şòÏÍ­.
+Z	java:S106"9Replace this use of System.out or System.err by a logger.(Ç¬Àüÿÿÿÿÿ8ŠÛ°Î­.
