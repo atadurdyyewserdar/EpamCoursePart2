@@ -1,6 +1,8 @@
 
-c
-java:S2142B"FEither re-interrupt this method or rethrow the "InterruptedException".(ä ¹€8‹ÐÀÌ­.
+j
+java:S2095%"HUse try-with-resources or close this "Connection" in a "finally" clause.(¹»­èúÿÿÿÿ8‚†ÞÎ­.
+Y
+java:S25892"7Remove this expression which always evaluates to "true"(¢­¨™ùÿÿÿÿ8‹ÐÀÌ­.
 P
 java:S1068"3Remove this unused "PROPERTIES_PATH" private field.(±‘Áú8 †ÄÏ­.
 p
@@ -8,7 +10,5 @@ java:S3008"SRename this field "INSTANCE" to match the regular expression '^[a-
 U	java:S106F"9Replace this use of System.out or System.err by a logger.(‡›ˆ¿8òà¼Î­.
 c
 java:S2142c"FEither re-interrupt this method or rethrow the "InterruptedException".(ÿ“¿Å8‹ÐÀÌ­.
-j
-java:S2095%"HUse try-with-resources or close this "Connection" in a "finally" clause.(¹»­èúÿÿÿÿ8‚†ÞÎ­.
-Y
-java:S25892"7Remove this expression which always evaluates to "true"(¢­¨™ùÿÿÿÿ8‹ÐÀÌ­.
+c
+java:S2142B"FEither re-interrupt this method or rethrow the "InterruptedException".(ä ¹€8‹ÐÀÌ­.

@@ -3,7 +3,8 @@ package com.company.command.impl;
 import com.company.command.Commandd;
 
 public enum CommandType {
-    LOGIN(new LoginCommand());
+    LOGIN(new LoginCommand()),
+    REGISTER(new RegisterCommand());
 
     private Commandd command;
 

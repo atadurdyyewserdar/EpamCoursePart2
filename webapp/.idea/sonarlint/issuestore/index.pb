@@ -26,12 +26,8 @@ _
 /src/main/java/com/company/command/Commandd.java,8\e\8ef835a9f63757e2e03e4470118debadaaacbac6
 b
 2src/main/java/com/company/pool/ConnectionPool.java,1\6\16f8e142b2d8c37be2537ccae90b9f149324050b
-^
-.src/main/java/com/company/servlet/Servlet.java,5\1\51290085e5887b11401283cbfd20ce10b7aae64e
 Z
 *src/main/java/com/company/entity/User.java,d\8\d8ea96ae4aff656dd7a470a212cced3a8115d00d
-b
-2src/main/java/com/company/command/impl/SignUp.java,c\d\cdbe8f08e4905eee5808925e326963c3e64dd6e7
 _
 /src/main/java/com/company/dao/impl/UserDao.java,d\1\d10262c119bb7d6bb16dd2416189c38556ee9fb9
 ^
@@ -46,3 +42,17 @@ m
 =src/main/java/com/company/service/factory/ServiceFactory.java,3\c\3cf8809be10726b3f0c036e49e01aaabeab98fdb
 G
 logs/propertieslogs.log,6\1\61238b15ba74e43a5ef21834a02e7afbbba09d09
+f
+6src/main/java/com/company/validator/UserValidator.java,8\e\8e0fea5d2b1ebb6c011af1e7f0cfcf6c29e7759e
+b
+2src/main/java/com/company/mail/SessionFactory.java,e\2\e2e39d42d24c46900a1d517cf4f59dae6589d4ce
+b
+2src/main/java/com/company/mail/SessionCreator.java,3\5\350ec4d3a592e195af4ed8925441fb32c545445b
+^
+.src/main/java/com/company/mail/MailSender.java,1\9\199a97192aaab29884ecd03198671d9aac383382
+d
+4src/main/java/com/company/filter/EncodingFilter.java,0\d\0d5282d3450989e9269d19308bbcd1901ebb83fd
+k
+;src/main/java/com/company/command/impl/RegisterCommand.java,7\b\7b090f4baed7eb0ae398605329f591cd70f069ec
+P
+ src/main/webapp/jsp/register.jsp,f\0\f07901c1a6737c04764b8bbbfdfdefe4ca1e4cff

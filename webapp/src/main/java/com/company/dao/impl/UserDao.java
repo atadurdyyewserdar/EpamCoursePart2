@@ -14,14 +14,12 @@ public class UserDao implements AbstractDao<User> {
     private static Logger logger = LogManager.getLogger();
     private static final String SELECT_ALL = "SELECT idUser, role, fio, login, password, access from movie_rating.user";
     private static final String SELECT_BY_ID = "SELECT idUser, role, fio, login, password, access from movie_rating.user where idUser =?";
-    private static final String INSERT = "INSERT INTO `movie_rating`.`user` (`idUser`, `role`, `fio`, `login`, `password`, `access`) VALUES (?, ?, ?, ?, ?, ?);";
+    private static final String INSERT = "INSERT INTO `movie_rating`.`user` (`role`, `fio`, `login`, `password`, `access`) VALUES (?, ?, ?, ?, ?);";
 
     @Override
     public List<User> findAll() {
-        System.out.println("SELECT ALL METHOD");
         List<User> userList = new ArrayList<>();
         Connection connection = ConnectionPool.getInstance().borrow();
-        System.out.println("CONNECTION BORROWED");
         try (Statement statement = connection.createStatement();
              ResultSet resultSet = statement.executeQuery(SELECT_ALL)) {
             while (resultSet.next()) {
@@ -34,11 +32,9 @@ public class UserDao implements AbstractDao<User> {
                 byte b = resultSet.getByte(6);
                 user.setAccess(Boolean.parseBoolean(Byte.toString(b)));
                 userList.add(user);
-                System.out.println(user);
-                System.out.println("=========================");
             }
         } catch (SQLException e) {
-            logger.info(e);
+            logger.error(e);
         } finally {
             ConnectionPool.getInstance().forfeit(connection);
         }
@@ -63,7 +59,7 @@ public class UserDao implements AbstractDao<User> {
                 user.setAccess(Boolean.parseBoolean(Byte.toString(b)));
             }
         } catch (SQLException e) {
-            logger.info(e);
+            logger.error(e);
         } finally {
             ConnectionPool.getInstance().forfeit(connection);
         }
@@ -74,15 +70,14 @@ public class UserDao implements AbstractDao<User> {
     public void create(User data) {
         Connection connection = ConnectionPool.getInstance().borrow();
         try (PreparedStatement preparedStatement = connection.prepareStatement(INSERT)) {
-            preparedStatement.setInt(1, data.getIdUser());
-            preparedStatement.setString(2, data.getRole());
-            preparedStatement.setString(3, data.getFio());
-            preparedStatement.setString(4, data.getLogin());
+            preparedStatement.setString(1, data.getRole());
+            preparedStatement.setString(2, data.getFio());
+            preparedStatement.setString(3, data.getLogin());
             preparedStatement.setString(4, data.getPassword());
-            preparedStatement.setByte(4, Byte.parseByte(String.valueOf(data.isAccess())));
+            preparedStatement.setBoolean(5, Boolean.parseBoolean(String.valueOf(data.isAccess())));
             preparedStatement.execute();
         } catch (SQLException e) {
-            logger.info(e);
+            logger.error(e);
         } finally {
             ConnectionPool.getInstance().forfeit(connection);
         }
@@ -103,6 +98,8 @@ public class UserDao implements AbstractDao<User> {
         for (User user : userList) {
             if (user.getLogin().equals(login)) {
                 result = user;
+                logger.info("User found...");
+                logger.info(user);
             }
         }
         return result;

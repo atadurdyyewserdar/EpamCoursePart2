@@ -32,7 +32,6 @@ public class LoginCommand implements Commandd {
                         .append(loginValue)
                         .append("logged in");
                 logger.info(stringBuilder.toString());
-                request.setAttribute("user", loginValue);
                 page = "/jsp/main.jsp";
             } else {
                 page = "/jsp/login.jsp";

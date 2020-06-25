@@ -25,6 +25,7 @@ public class Controller extends HttpServlet {
     private void processRequest(HttpServletRequest
                                         request, HttpServletResponse response)
             throws ServletException, IOException {
+
         Optional<Commandd> commandOptional = CommandProvider.defineCommand(request.getParameter("command"));
         Commandd command = commandOptional.orElseThrow(IllegalArgumentException::new);
         String page = command.execute(request, response);
