@@ -1,4 +1,4 @@
 package com.company.command;
 
-public interface Commandd {
+public class PagePath {
 }
