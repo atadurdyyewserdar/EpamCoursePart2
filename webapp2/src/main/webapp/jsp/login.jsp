@@ -14,6 +14,10 @@ charset=UTF-8" pageEncoding="UTF-8" %>
     <input type="password" name="password" value="">
     <br/>
     <input type="submit" value="Enter">
+    <br/>
+    <a href="${pageContext.request.contextPath}/register.jsp">
+        register
+    </a>
 </form>
 <hr/>
 <br/>
