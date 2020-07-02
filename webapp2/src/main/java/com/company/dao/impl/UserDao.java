@@ -12,9 +12,9 @@ import java.util.List;
 
 public class UserDao implements AbstractDao<User> {
     private static Logger logger = LogManager.getLogger();
-    private static final String SELECT_ALL = "SELECT idUser, role, fio, login, password, access from movie_rating.user";
-    private static final String SELECT_BY_ID = "SELECT idUser, role, fio, login, password, access from movie_rating.user where idUser =?";
-    private static final String INSERT = "INSERT INTO `movie_rating`.`user` (`role`, `fio`, `login`, `password`, `access`) VALUES (?, ?, ?, ?, ?);";
+    private static final String SELECT_ALL = "SELECT idUser, role, fio, login, password, access , mail from movie_rating.user";
+    private static final String SELECT_BY_ID = "SELECT idUser, role, fio, login, password, access, mail from movie_rating.user where idUser =?";
+    private static final String INSERT = "INSERT INTO `movie_rating`.`user` (`role`, `fio`, `login`, `password`, `access`, `mail`) VALUES (?, ?, ?, ?, ?, ?);";
 
     @Override
     public List<User> findAll() {
@@ -30,6 +30,7 @@ public class UserDao implements AbstractDao<User> {
                 user.setLogin(resultSet.getString(4));
                 user.setPassword(resultSet.getString(5));
                 byte b = resultSet.getByte(6);
+                user.setMail(resultSet.getString(7));
                 user.setAccess(Boolean.parseBoolean(Byte.toString(b)));
                 userList.add(user);
             }
@@ -68,6 +69,7 @@ public class UserDao implements AbstractDao<User> {
             preparedStatement.setString(3, data.getLogin());
             preparedStatement.setString(4, data.getPassword());
             preparedStatement.setBoolean(5, Boolean.parseBoolean(String.valueOf(data.isAccess())));
+            preparedStatement.setString(6, data.getMail());
             preparedStatement.execute();
         } catch (SQLException e) {
             logger.error(e);

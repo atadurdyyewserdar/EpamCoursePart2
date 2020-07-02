@@ -1,4 +1,18 @@
 package com.company.service;
 
-public class ServiceException {
+public class ServiceException extends Exception{
+    public ServiceException() {
+    }
+
+    public ServiceException(String message) {
+        super(message);
+    }
+
+    public ServiceException(String message, Exception exception) {
+        super(message, exception);
+    }
+
+    public ServiceException(Exception exception) {
+        super(exception);
+    }
 }

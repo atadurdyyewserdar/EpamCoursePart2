@@ -27,6 +27,7 @@ public class UserValidator {
     private static final String PASSWORD_REGEX = "^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&+=])(?=\\S+$).{8,}$";
     private static final String LOGIN_REGEX = "^[a-zA-Z0-9._-]{3,}$";
     private static final String FIO_REGEX = "^[\\p{L} .'-]+$";
+    private static final String EMAIL_REGEX = "^[A-Z0-9._%+-]+@[A-Z0-9.-]+\\.[A-Z]{2,6}$";
 
     public static boolean checkFio(String fio) {
         Pattern pattern = Pattern.compile(FIO_REGEX);
@@ -44,5 +45,12 @@ public class UserValidator {
         Pattern pattern = Pattern.compile(PASSWORD_REGEX);
         Matcher matcher = pattern.matcher(password);
         return matcher.matches();
+    }
+
+    public static boolean checkMail(String mail) {
+        Pattern pattern = Pattern.compile(EMAIL_REGEX, Pattern.CASE_INSENSITIVE);
+        Matcher matcher = pattern.matcher(mail);
+        return matcher.matches();
+
     }
 }

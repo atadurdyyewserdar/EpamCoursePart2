@@ -21,6 +21,9 @@ charset=UTF-8" pageEncoding="UTF-8" %>
     Password:<br/>
     <input type="password" name="password" value="">
     <br/>
+    Mail:<br/>
+    <input type="text" name="mail" value="">
+    <br/>
     <input type="submit" value="Enter">
 </form>
 <hr/>

@@ -15,6 +15,7 @@ public class RegisterCommand implements Commandd {
     private static final String PARAM_LOGIN = "login";
     private static final String PARAM_PASSWORD = "password";
     private static final String PARAM_FIO = "fio";
+    private static final String PARAM_MAIL = "mail";
     private static Logger logger = LogManager.getLogger();
 
     @Override
@@ -23,6 +24,7 @@ public class RegisterCommand implements Commandd {
         String loginValue = request.getParameter(PARAM_LOGIN);
         String passValue = request.getParameter(PARAM_PASSWORD);
         String fioValue = request.getParameter(PARAM_FIO);
+        String mailValue = request.getParameter(PARAM_MAIL);
 
         if (loginValue != null && !loginValue.isBlank() && passValue != null && !passValue.isBlank()) {
             ClientService clientService = ServiceFactory.getInstance().getClientService();
@@ -31,7 +33,7 @@ public class RegisterCommand implements Commandd {
                 //TODO invalid data
                 page = PagePath.REGISTER_PAGE;
             } */
-            if (clientService.register(loginValue, passValue, fioValue)) {
+            if (clientService.register(loginValue, passValue, fioValue, mailValue)) {
                 page = PagePath.LOGIN_PAGE;
             } else {
                 page = PagePath.REGISTER_PAGE;

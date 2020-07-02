@@ -1,5 +1,5 @@
 <html>
 <body>
-<jsp:forward page="/jsp/login.jsp"/>
+<jsp:forward page="/jsp/upload.jsp"/>
 </body>
 </html>

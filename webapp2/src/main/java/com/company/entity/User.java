@@ -8,18 +8,20 @@ public class User {
     private String fio;
     private String login;
     private String password;
+    private String mail;
     private boolean access;
 
     public User() {
     }
 
-    public User(int idUser, String role, String fio, String login, String password, boolean access) {
+    public User(int idUser, String role, String fio, String login, String password, boolean access, String mail) {
         this.idUser = idUser;
         this.role = role;
         this.fio = fio;
         this.login = login;
         this.password = password;
         this.access = access;
+        this.mail = mail;
     }
 
     public int getIdUser() {
@@ -70,6 +72,14 @@ public class User {
         this.access = access;
     }
 
+    public String getMail() {
+        return mail;
+    }
+
+    public void setMail(String mail) {
+        this.mail = mail;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -80,12 +90,14 @@ public class User {
                 role.equals(user.role) &&
                 fio.equals(user.fio) &&
                 login.equals(user.login) &&
-                password.equals(user.password);
+                password.equals(user.password) &&
+                mail.equals(user.mail);
     }
+
 
     @Override
     public int hashCode() {
-        return Objects.hash(idUser, role, fio, login, password, access);
+        return Objects.hash(idUser, role, fio, login, password, access, mail);
     }
 
     @Override
@@ -98,6 +110,7 @@ public class User {
                 .append(", login='").append(login)
                 .append(", password='").append(password)
                 .append(", access=").append(access)
+                .append(", mail=").append(mail)
                 .append('}');
         return stringBuilder.toString();
     }

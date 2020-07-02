@@ -3,13 +3,13 @@ package com.company.dao;
 import java.util.List;
 
 public interface AbstractDao<T> {
-    List<T> findAll();
+    List<T> findAll() throws DaoException;
 
-    T findById(int id);
+    T findById(int id) throws DaoException;
 
-    void create(T data);
+    void create(T data) throws DaoException;
 
-    void update(T data);
+    void update(T data) throws DaoException;
 
-    void delete(T data);
+    void delete(T data) throws DaoException;
 }
